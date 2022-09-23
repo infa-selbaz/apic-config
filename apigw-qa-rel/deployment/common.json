@@ -1,0 +1,175 @@
+{
+    "config": {
+        "repo": "apic-config"
+    },
+    "landscape": {
+        "product": "apic",
+        "type": "aws",
+        "env": "qa",
+        "id": "qa",
+        "name": "qa",
+        "businessEntity": "INTCLOUD",
+        "businessUnit": "APIGW",
+        "applicationenv": "QA",
+        "owner": "",
+        "pod": "apigwqarel",
+        "budgetpod": "aws-qarel-pod1",
+        "displayname": "AWS QA Release",
+        "help": "qa",
+        "cluster": " aws-iicsqa-intcloud-apigwqarel-eks-qa-usw2",
+        "k8scontext": "arn:aws:eks:us-west-2:530774763960:cluster/intcloud-apigwqarel-eks-qa-usw2",
+        "aws": {
+            "region": "us-west-2"
+        },
+        "services": {
+            "nodelabelvalue": "APIGW-QAREL-NODE"
+        },  
+        "namespaces": {
+            "func": "apigw-qa-rel",
+            "gateway": "apigw-qa-rel",
+            "default": "apigw-qa-rel"
+        },
+        "iamroles": {
+            "mgmt": "",
+            "secret": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole",
+            "func": ""
+        },
+        "vault": {
+            "url": "https://ha-vault.eks.iicsqa.uswest2.cloudtrust.rocks",
+            "role": "qa-intcloud-apigw",
+            "basepath": "qa/intcloud/apigw/common/apigw-qa-rel",
+            "dbrelpath": ""
+        },
+        "terraform": {
+            "profile": "TBD",
+            "version": "TBD",
+            "namespace": "TBD",
+            "gitRepo": "TBD"
+        },
+        "iics": {
+            "certgen": {
+                "serviceaccount": "icrt"
+            },
+            "podname": "pod2",
+            "url": "qa-ma.rel.infaqa.com",
+            "podurl": "qa-pod2.rel.infaqa.com",
+            "cai": {
+                "internal": "TBD",
+                "external": "TBD",
+                "aeCredential": "TBD",
+                "icrtRuntimeUrl": "TBD"
+            },
+            "saas": {
+                "internal": "TBD",
+                "external": "TBD"
+            },
+            "vault": {
+                "url": "https://vault-uswest2.iicsqa.cloudtrust.rocks",
+                "role": "r33rel-pod1"
+            }
+        },
+        "gatewayList": [
+          {
+            "name": "apigw-internal",
+            "isInternal": "true",
+            "tlsMode": "mutual",
+            "isVaultInjector": "true",
+            "oidcRole": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole"
+          },
+          {
+            "name": "apigw-external",
+            "isInternal": "false",
+            "tlsMode": "simple",
+            "isVaultInjector": "true",
+            "oidcRole": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole"
+          }
+        ],
+        "urls": {
+            "cdlgAppUrl": "",
+            "mgmtAppUrl": "",
+            "": ""
+        },
+        "resetRouting": "true",
+        "keepversions": "false",
+        "deploymentConfiguration" : "",
+        "istio": {
+            "version": "1.14.3",
+            "isCanaryEnabled": true,
+            "hub": "infacloud-ct-docker.jfrog.io/foundation/istio/multiarch",
+            "tag": "1.14.3-tetrate-multiarch-v1"
+        }
+    },
+    "monitoring": {
+        "thanos": {
+            "host": "TBD",
+            "query": "TBD"
+        }
+    },
+    "resources": {
+        "consul":{
+            "url": "",
+            "address": "",
+            "port": ""
+        }
+    },
+    "validation": {
+        "jenkins": "ccgf-qa-jenkins",
+        "jenkinsPromote": "cd-Promote-Version-and-Artifacts",
+        "jenkinsTest": "Test-Job",
+        "jenkinsPlatformServiceRegistration": "PlatformServiceRegistration",
+        "jenkinsPlatformServiceRegistrationStage": "3",
+        "jenkinsServiceRegistration": "Test-Job",
+        "jenkinsServiceVersionUpdate": "Test-Job",
+        "disableTest": "Test-Job",
+        "deployFailureEmail": "Hawk-TinTin@informatica.com",
+        "deployFailureEmailCC": "ramaraok@informatica.com",
+        "testFailureEmail": "hawk-build@informatica.com",
+        "testFailureEmailCC": "DL_HawkQE@informatica.com",
+        "numberSimultaneousTenants": "1",
+        "jenkinsCredentialsId": "infa-edcdeploybot",
+        "jenkinsServiceConfiguration": "Test-Job",
+        "jenkinsCredentialsIdWrite": "infa-edcdeploybot",
+        "jenkinsServiceDeprovisioning": "ServiceDeprovisioning",
+        "jenkinsConsulRegister": "K8SConsulRegister",
+        "spinnakerDeployStageTimeout": "1800000"
+    },
+    "deployment": {
+        "pipeline-version": "0.2.359",
+        "artifacts": {
+            "url": "https://infacloud.jfrog.io/infacloud/",
+            "docker": "infacloud-apim-docker-dev.jfrog.io",
+            "service": "apim-docker-dev",
+            "service-test-suffix": "-test-ml",
+            "helm": "apim-helm",
+            "helm-promote": "apim-helm-stable",
+            "landscapeProvision": {
+                "name": "ccgf-landscape-provisioning-v2",
+                "version": "0.2.7"
+            },
+            "landscapeConfigMap": {
+                "name": "ccgf-landscape-configmap",
+                "version": "0.2.14"
+            },
+            "register": "apim-generic",
+            "credentialsId": "hawk-build-bot",
+            "imagePullSecret": "spinnakerrepoaccess"
+        },
+        "features": {
+            "jwtIssuer": {
+                "userName": "CICDUser", 
+                "jwtJar": {
+                    "version": "1.6.0.33", 
+                    "name": "hawk-stable"
+                }, 
+                "userId": "CICD", 
+                "isPubKeyRegistered": "false", 
+                "orgName": "System", 
+                "orgId": "52ZSTB0IDK6dXxaEQLUaQu", 
+                "issuer": "https://cicd.local"
+            }, 
+            "applog": {}
+        },
+        "services": {}
+    }
+}
+
