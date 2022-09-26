@@ -1,0 +1,14 @@
+# override lb url
+internalDns: ""
+externalDns: ""
+configmap:
+  extraConstant:
+    - key: iics_vault_region
+      value: us-west-2
+    - key: iics_vault_role
+      value: r33rel-pod1
+    - key: iics_vault_url
+      value: "https://vault-uswest2.iicsqa.cloudtrust.rocks"
+    - key: environment
+      value: aws
+  mgmtServices:

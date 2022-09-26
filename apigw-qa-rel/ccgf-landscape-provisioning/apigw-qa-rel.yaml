@@ -1,0 +1,29 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+# This file represents given namespace resources
+
+#Add namespace istio-injection label
+#labels:
+#  istio.io/rev: 1.14.3
+#  istio-discovery: enabled
+ 
+#ServiceAccounts
+serviceAccounts:
+  - name: ccgf-custom-job-pod-sa
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole
+  
+#Roles
+roles:
+  - name: k8s-mgmt
+
+#Rolebindings
+roleBindings:
+  - name: ccgf-custom-job-pod-rb
+    serviceAccount: ccgf-custom-job-pod-sa
+    role: k8s-mgmt
+
+
+#istio-sidecar
+istioSidecar:
+  name: default

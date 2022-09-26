@@ -1,0 +1,4 @@
+jobType: "certificate-generator"
+
+imageSecrets: spinnakerrepoaccess
+imagePullPolicy: Always

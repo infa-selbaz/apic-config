@@ -1,0 +1,9 @@
+service:
+  standard:
+    labels:
+      cloudtrust.rocks/owneremail: ''
+      cloudtrust.rocks/businessentity: INTCLOUD
+      cloudtrust.rocks/businessunit: APIGW
+      cloudtrust.rocks/applicationenv: QA
+      cloudtrust.rocks/pod: apigwqarel
+      cloudtrust.rocks/budgetpod: aws-qarel-pod1
