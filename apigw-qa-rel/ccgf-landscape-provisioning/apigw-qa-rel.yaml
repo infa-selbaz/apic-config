@@ -10,8 +10,6 @@
 #ServiceAccounts
 serviceAccounts:
   - name: ccgf-custom-job-pod-sa
-    annotations:
-      eks.amazonaws.com/role-arn: arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole
   
 #Roles
 roles:
