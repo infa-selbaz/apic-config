@@ -70,14 +70,14 @@
         },
         "gatewayList": [
           {
-            "name": "apigw-gateway-internal",
+            "name": "apic-gateway-internal",
             "isInternal": "true",
             "tlsMode": "mutual",
             "isVaultInjector": "true",
             "oidcRole": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole"
           },
           {
-            "name": "apigw-gateway-external",
+            "name": "apic-gateway-external",
             "isInternal": "true",
             "tlsMode": "simple",
             "isVaultInjector": "true",
