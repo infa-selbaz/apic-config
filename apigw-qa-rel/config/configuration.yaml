@@ -1,0 +1,15 @@
+global:
+ identity_service_base_url: ""
+ session_service_base_url: ""
+ migration_service_base_url: ""
+ frs_base_url: ""
+ application_integration_base_url: ""
+ application_integration_internal_base_url: ""
+designer:
+  apim_designer_service_jks_path=/etc/ssl/infa-certs/<service-name.jks>
+  apim_designer_jdbc_url=jdbc:mysql://<db server>:<db port>/<db name>
+  artifacts_base_path=/AppMount/apim/artifacts
+  logs_base_path=/AppMount/apim/logs
+  logging_level_apim=DEBUG
+  logging_level_spring=ERROR
+  
