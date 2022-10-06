@@ -140,8 +140,8 @@
             "docker": "infacloud-apim-docker-dev.jfrog.io",
             "service": "apim-docker-dev",
             "service-test-suffix": "-test-ml",
-            "helm": "apim-helm",
-            "helm-promote": "apim-helm-stable",
+            "helm": "art-apim-helm",
+            "helm-promote": "art-apim-helm-stable",
             "landscapeProvision": {
                 "name": "ccgf-landscape-provisioning-v2",
                 "version": "0.2.7"
