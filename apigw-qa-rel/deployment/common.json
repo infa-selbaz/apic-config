@@ -78,7 +78,7 @@
           },
           {
             "name": "apigw-gateway-external",
-            "isInternal": "false",
+            "isInternal": "true",
             "tlsMode": "simple",
             "isVaultInjector": "true",
             "oidcRole": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole"
