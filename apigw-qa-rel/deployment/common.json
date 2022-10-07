@@ -16,7 +16,7 @@
         "budgetpod": "aws-qarel-pod1",
         "displayname": "AWS QA Release",
         "help": "qa",
-        "cluster": " aws-iicsqa-intcloud-apigwqarel-eks-qa-usw2",
+        "cluster": "aws-iicsqa-intcloud-apigwqarel-eks-qa-usw2",
         "k8scontext": "arn:aws:eks:us-west-2:530774763960:cluster/intcloud-apigwqarel-eks-qa-usw2",
         "aws": {
             "region": "us-west-2"
