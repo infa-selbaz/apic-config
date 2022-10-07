@@ -96,7 +96,8 @@
             "version": "1.13.2",
             "isCanaryEnabled": true,
             "hub": "infacloud-ct-docker.jfrog.io/foundation/istio/multiarch",
-            "tag": "1.14.3-tetrate-multiarch-v1"
+            "tag": "1.13.2",
+            "revision": "1-13-2"
         }
     },
     "monitoring": {
