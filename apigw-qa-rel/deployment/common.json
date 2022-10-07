@@ -74,14 +74,14 @@
             "isInternal": "true",
             "tlsMode": "mutual",
             "isVaultInjector": "true",
-            "oidcRole": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole"
+            "oidcRole": ""
           },
           {
             "name": "apic-gateway-external",
             "isInternal": "true",
             "tlsMode": "simple",
             "isVaultInjector": "true",
-            "oidcRole": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole"
+            "oidcRole": ""
           }
         ],
         "urls": {
