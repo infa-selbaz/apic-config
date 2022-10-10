@@ -1,13 +1,13 @@
 global:
- identity_service_base_url: "https://qa-ma.rel.infaqa.com/identity-service"
- session_service_base_url: "https://qa-pod1.rel.infaqa.com/session-service"
- migration_service_base_url: "https://qa-pod1.rel.infaqa.com/migration"
- frs_base_url: "https://qa-pod1.rel.infaqa.com/frs"
- application_integration_base_url: ""
- application_integration_internal_base_url: "https://ias-qa-rel-pod1-int-elb.infacloudops.net"
+  identity_service_base_url: "https://qa-ma.rel.infaqa.com/identity-service"
+  session_service_base_url: "https://qa-pod1.rel.infaqa.com/session-service"
+  migration_service_base_url: "https://qa-pod1.rel.infaqa.com/migration"
+  frs_base_url: "https://qa-pod1.rel.infaqa.com/frs"
+  application_integration_base_url: "https://ias-pod1.rel.infaqa.com/disnext"
+  application_integration_internal_base_url: "https://ias-qa-rel-pod1-int-elb.infacloudops.net/disnext"
 designer:
-  apim_designer_service_jks_path=/etc/ssl/infa-certs/<service-name.jks>
-  apim_designer_jdbc_url=jdbc:mysql://apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com:3306/apim_designer
+  apim_designer_service_jks_path="/etc/ssl/infa-certs/<service-name.jks>"
+  apim_designer_jdbc_url="jdbc:mysql://apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com:3306/apim_designer"
   artifacts_base_path=/AppMount/apim/artifacts
   logs_base_path=/AppMount/apim/logs
   logging_level_apim=DEBUG
