@@ -25,3 +25,11 @@ roleBindings:
 #istio-sidecar
 istioSidecar:
   name: default
+  
+#persistentVolumesAndClaims
+volumes:
+  - name: apigw-artifacts
+    namespace: apigw-qa-rel
+    fileSystemId: fs-041a5cc82b99be714
+    accessMode: ReadWriteMany
+    storage: 5Gi
