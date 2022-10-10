@@ -111,7 +111,33 @@
             "url": "",
             "address": "",
             "port": ""
-        }
+        },
+        "rds": {
+            "dbsprefix": "",
+            "firstdbs": "apim_designer",
+		    "first_datastores": [
+		    {
+			  "dbname": "apim_designer",
+			  "classtype": "serviceResource",
+			  "category": "RDBMS",
+			  "name": "apic-designer",
+			  "function": "main",
+			  "tenantid": "system",
+			  "usertype": "user",
+			  "status": "active"
+		   }
+           ],
+            "master_database": {
+                "classtype": "resource",
+                "category": "RDBMS",
+                "type": "mysql",
+                "name": "MySQL",
+                "status": "active"
+            },
+            "prefix": "apic",
+            "url": "apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com",
+            "version": "8.0"
+      }
     },
     "validation": {
         "jenkins": "ccgf-qa-jenkins",
