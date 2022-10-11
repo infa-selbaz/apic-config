@@ -32,7 +32,8 @@
         "iamroles": {
             "mgmt": "",
             "secret": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole",
-            "func": ""
+            "func": "",
+            "app": ""
         },
         "vault": {
             "url": "https://ha-vault.eks.iicsqa.uswest2.cloudtrust.rocks",
