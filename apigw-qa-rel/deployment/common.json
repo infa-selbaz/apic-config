@@ -165,7 +165,7 @@
         "spinnakerDeployStageTimeout": "1800000"
     },
     "deployment": {
-        "pipeline-version": "0.2.387",
+        "pipeline-version": "0.2.388",
         "artifacts": {
             "url": "https://infacloud.jfrog.io/infacloud/",
             "docker": "infacloud-apim-docker-dev.jfrog.io",
