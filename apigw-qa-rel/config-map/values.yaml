@@ -12,5 +12,5 @@ configmap:
     - key: environment
       value: aws
     - key: cms_service_url
-      value: ""
+      value: "NA"
   mgmtServices:
