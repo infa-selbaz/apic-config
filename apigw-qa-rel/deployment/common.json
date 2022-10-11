@@ -140,7 +140,7 @@
             "prefix": "apic",
             "url": "apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com",
             "version": "8.0",
-	    "port" : ""
+	    "port" : "3306"
       }
     },
     "validation": {
