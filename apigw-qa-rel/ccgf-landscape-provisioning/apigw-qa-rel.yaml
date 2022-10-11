@@ -10,6 +10,7 @@
 #ServiceAccounts
 serviceAccounts:
   - name: ccgf-custom-job-pod-sa
+  - name: apim-service-account
   
 #Roles
 roles:
