@@ -11,4 +11,6 @@ configmap:
       value: "https://vault-uswest2.iicsqa.cloudtrust.rocks"
     - key: environment
       value: aws
+    - key: cms_service_url
+      value: ""
   mgmtServices:
