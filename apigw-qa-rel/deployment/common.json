@@ -93,6 +93,7 @@
         },
         "resetRouting": "true",
         "keepversions": "false",
+	"isCanary": "false",
         "deploymentConfiguration" : "",
         "istio": {
             "version": "1.14.3",
