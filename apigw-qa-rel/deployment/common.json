@@ -182,7 +182,7 @@
                 "version": "0.2.14"
             },
             "register": "apim-generic",
-            "credentialsId": "iicsdeploybot",
+            "credentialsId": "hawk-build-bot",
             "imagePullSecret": "spinnakerrepoaccess"
         },
         "features": {
