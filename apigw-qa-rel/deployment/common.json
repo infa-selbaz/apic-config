@@ -3,7 +3,7 @@
         "repo": "apic-config"
     },
     "landscape": {
-        "product": "apic",
+        "product": "apim",
         "type": "aws",
         "env": "qa",
         "id": "qa",
@@ -72,14 +72,14 @@
         },
         "gatewayList": [
           {
-            "name": "apic-gateway-internal",
+            "name": "apim-gateway-internal",
             "isInternal": "true",
             "tlsMode": "mutual",
             "isVaultInjector": "true",
             "oidcRole": ""
           },
           {
-            "name": "apic-gateway-external",
+            "name": "apim-gateway-external",
             "isInternal": "true",
             "tlsMode": "simple",
             "isVaultInjector": "true",
@@ -123,7 +123,7 @@
 			  "dbname": "apim_designer",
 			  "classtype": "serviceResource",
 			  "category": "RDBMS",
-			  "name": "apic-designer",
+			  "name": "apim-designer",
 			  "function": "main",
 			  "tenantid": "system",
 			  "usertype": "user",
@@ -137,8 +137,8 @@
                 "name": "MySQL",
                 "status": "active"
             },
-            "prefix": "apic",
-            "url": "apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com",
+            "prefix": "apim",
+            "url": "apigw-qa-release-pod1-apim-rds.cce748qswozo.us-west-2.rds.amazonaws.com",
             "version": "8.0",
 	    "port" : "3306"
       }
@@ -203,4 +203,3 @@
         "services": {}
     }
 }
-
