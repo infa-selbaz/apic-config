@@ -33,3 +33,8 @@ volumes:
     fileSystemId: fs-041a5cc82b99be714
     accessMode: ReadWriteMany
     storage: 5Gi
+  - name: logs
+    namespace: apigw-qa-rel
+    fileSystemId: fs-062f419063b6f76e8
+    accessMode: ReadWriteMany
+    storage: 5Gi
