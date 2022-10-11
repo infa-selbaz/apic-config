@@ -175,7 +175,7 @@
             "helm-promote": "apim-helm-stable",
             "landscapeProvision": {
                 "name": "ccgf-landscape-provisioning-v2",
-                "version": "0.2.7"
+                "version": "0.2.8"
             },
             "landscapeConfigMap": {
                 "name": "ccgf-landscape-configmap",
