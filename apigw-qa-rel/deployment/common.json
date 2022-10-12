@@ -96,12 +96,12 @@
 	"isCanary": "false",
         "deploymentConfiguration" : "",
         "istio": {
-            "version": "1.13.2",
+            "version": "1.14.3",
             "isCanaryEnabled": true,
             "hub": "infacloud-ct-docker.jfrog.io/foundation/istio/multiarch",
-            "tag": "1.13.2",
-            "revision": "1-13-2"
-       }
+            "tag": "1.14.3-tetrate-multiarch-v1",
+            "revision": "1-14-3"
+        }
     },
     "monitoring": {
         "thanos": {
@@ -165,7 +165,7 @@
         "spinnakerDeployStageTimeout": "1800000"
     },
     "deployment": {
-        "pipeline-version": "0.2.394",
+        "pipeline-version": "0.2.395",
         "artifacts": {
             "url": "https://infacloud.jfrog.io/infacloud/",
             "docker": "infacloud-apim-docker-dev.jfrog.io",
