@@ -6,6 +6,10 @@ service:
     enabled: false
   image:
     repository: ""
+  ports:
+    containerPort: 8080
+    name: apim-designer
+    targetPort: 8080
   deployment:
     annotations:
     - name: vault.hashicorp.com/role
@@ -14,9 +18,9 @@ service:
   deployment:
     customannotations:
       vault.hashicorp.com/role: qa-intcloud-apigw
-      vault.hashicorp.com/agent-inject-secret-db-secret.properties:  kv/data/qa/intcloud/apigw/common/aws-iicsqa-intcloud-apigwqarel-eks-qa-usw2/apigw-qa-rel/serviceResource/RDBMS/apim-designer/main/system/user/active
-      vault.hashicorp.com/secret-volume-path-db-secret.properties: /opt/tomcat/secret/
-      vault.hashicorp.com/agent-inject-template-db-secret.properties: |
+      vault.hashicorp.com/agent-inject-secret-db.properties:  kv/data/qa/intcloud/apigw/common/aws-iicsqa-intcloud-apigwqarel-eks-qa-usw2/apigw-qa-rel/serviceResource/RDBMS/apim-designer/main/system/user/active
+      vault.hashicorp.com/secret-volume-path-db.properties: /opt/tomcat/secret/
+      vault.hashicorp.com/agent-inject-template-db.properties: |
         {{- with secret "kv/data/qa/intcloud/apigw/common/aws-iicsqa-intcloud-apigwqarel-eks-qa-usw2/apigw-qa-rel/serviceResource/RDBMS/apim-designer/main/system/user/active" }}
         {{- range $k, $v := .Data.data }}
         {{$k}}={{$v}}
