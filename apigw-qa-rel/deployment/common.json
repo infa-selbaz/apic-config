@@ -50,7 +50,7 @@
         },
         "iics": {
             "certgen": {
-                "serviceaccount": "icrt"
+                "serviceaccount": "apic"
             },
             "podname": "pod2",
             "url": "qa-ma.rel.infaqa.com",
