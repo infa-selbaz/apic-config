@@ -140,7 +140,7 @@
             },
             "prefix": "apim",
             "url": "apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com",
-            "version": "8.0",
+            "version": "1.0.0",
 	    "port" : "3306"
       }
     },
