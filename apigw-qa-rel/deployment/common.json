@@ -128,17 +128,8 @@
 			  "tenantid": "system",
 			  "usertype": "user",
 			  "status": "active"
-		   },
-		   {
-			  "dbname": "apim_connector",
-			  "classtype": "serviceResource",
-			  "category": "RDBMS",
-			  "name": "apim-connector",
-			  "function": "main",
-			  "tenantid": "system",
-			  "usertype": "user",
-			  "status": "active"
 		   }
+		   
            ],
             "master_database": {
                 "classtype": "resource",
@@ -175,7 +166,7 @@
         "spinnakerDeployStageTimeout": "1800000"
     },
     "deployment": {
-        "pipeline-version": "0.2.395",
+        "pipeline-version": "0.2.396",
         "artifacts": {
             "url": "https://infacloud.jfrog.io/infacloud/",
             "docker": "infacloud-apim-docker-dev.jfrog.io",
