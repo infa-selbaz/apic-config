@@ -215,8 +215,9 @@
                 "apim-designer": {
                     "db": {
                         "liquibaseImage": "apim-designer-service-db",
-                        "dbRelPath": "/serviceResource/RDBMS/apim-designer/main/system/user/active",
-			"db_name": "apim_designer"
+                        "dbRelPath": "/serviceResource/RDBMS/apim-designer/main/system/admin/active",
+			"db_name": "apim_designer",
+			"db_version" : "1.0.0"
                     }
                 }
             }
