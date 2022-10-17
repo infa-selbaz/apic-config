@@ -5,6 +5,17 @@ global:
   frs_base_url: "https://qa-pod1.rel.infaqa.com/frs"
   application_integration_base_url: "https://ias-pod1.rel.infaqa.com/disnext"
   application_integration_internal_base_url: "https://ias-qa-rel-pod1-int-elb.infacloudops.net/disnext"
+  cloudshell_service_base_url: "https://qa-pod1.rel.infaqa.com/cloudshell"
+  ma_service_base_url: "https://qa-ma.rel.infaqa.com/ma"
+  saas_service_base_url: "https://qa-pod2.rel.infaqa.com/saas"
+  session_service_base_url: "https://qa-pod2.rel.infaqa.com/session-service"
+  license_service_base_url: "https://qa-pod1.rel.infaqa.com/license-service"
+  notification_service_base_url: "https://qa-pod1.rel.infaqa.com/notification-service"
+  pod_service_base_url: "https://qa-pod1.rel.infaqa.com"
+  apic_service_base_url: "https://pod1-apic.rel.infaqa.com"
+  help_service_base_url: "https://network.informatica.com/onlinehelp/IICS/test"
+  preference_service_base_url: "https://qa-pod1.rel.infaqa.com/preference-service"
+  current_env: "qa"
 designer:
   apim_designer_service_jks_path: "/etc/ssl/infa-certs/apim-designer-keystore.jks"
   apim_designer_jdbc_url: "jdbc:mysql://apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com:3306/apim_designer"
@@ -12,4 +23,7 @@ designer:
   logs_base_path: "/AppMount/apim/logs"
   logging_level_apim: "DEBUG"
   logging_level_spring: "ERROR"
-  
+ui:
+  cloud_ping_interval: 600
+  cloud_session_timeout: 600
+  notification_poll_interval: 60
