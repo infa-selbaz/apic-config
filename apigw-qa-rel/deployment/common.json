@@ -128,7 +128,17 @@
 			  "tenantid": "system",
 			  "usertype": "user",
 			  "status": "active"
-		   }
+		   },
+		   {
+			  "dbname": "apim_designer",
+			  "classtype": "serviceResource",
+			  "category": "RDBMS",
+			  "name": "apim-designer",
+			  "function": "main",
+			  "tenantid": "system",
+			  "usertype": "admin",
+			  "status": "active"
+		   }	    
 		   
            ],
             "master_database": {
