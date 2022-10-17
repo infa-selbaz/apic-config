@@ -39,7 +39,7 @@
             "url": "https://ha-vault.eks.iicsqa.uswest2.cloudtrust.rocks",
             "role": "qa-intcloud-apigw",
             "basepath": "qa/intcloud/apigw/common/aws-iicsqa-intcloud-apigwqarel-eks-qa-usw2/apigw-qa-rel",
-            "dbrelpath": "/serviceResource/RDBMS/apim-designer/main/system/user/active"
+            "dbrelpath": "/resource/RDBMS/mysql/MySQL/active"
         },
         "terraform": {
             "profile": "TBD",
