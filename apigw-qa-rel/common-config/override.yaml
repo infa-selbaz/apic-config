@@ -1,7 +1,7 @@
 service:
   standard:
     labels:
-      cloudtrust.rocks/owneremail: ''
+      cloudtrust.rocks/owneremail: DL_Cloud_ProductOps@informatica.com
       cloudtrust.rocks/businessentity: INTCLOUD
       cloudtrust.rocks/businessunit: APIGW
       cloudtrust.rocks/applicationenv: QA
