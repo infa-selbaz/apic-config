@@ -6,3 +6,7 @@ service:
     enabled: false
   image:
     repository: ""
+  ports:
+    containerPort: 8080
+    name: apim-designer-ui-app
+    targetPort: 8080
