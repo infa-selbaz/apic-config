@@ -6,3 +6,9 @@ service:
     enabled: false
   image:
     repository: ""
+  containers:
+    cmenv:
+    - name: API_URL
+      cmkey: external.url
+      cmname: landscape-config
+      nsSuffix: true
