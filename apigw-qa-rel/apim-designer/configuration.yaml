@@ -6,10 +6,6 @@ service:
     enabled: false
   image:
     repository: ""
-  ports:
-    containerPort: 8080
-    name: apim-designer
-    targetPort: 8080
   deployment:
     annotations:
     - name: vault.hashicorp.com/role
