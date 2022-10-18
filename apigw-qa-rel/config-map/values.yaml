@@ -13,6 +13,6 @@ configmap:
       value: aws
     - key: cms_service_url
       value: "NA"
-    - key: external.url
+    - key: external_url
       value: "https://pod1-apic.rel.infaqa.com"
   mgmtServices:
