@@ -87,9 +87,9 @@
           }
         ],
         "urls": {
-            "cdlgAppUrl": "",
-            "mgmtAppUrl": "",
-            "": ""
+            "cdlgAppUrl": "https://pod1-apic.rel.infaqa.com",
+            "mgmtAppUrl": "https://pod1-apic.rel.infaqa.com",
+            "": "https://pod1-apic.rel.infaqa.com"
         },
         "resetRouting": "true",
         "keepversions": "false",
