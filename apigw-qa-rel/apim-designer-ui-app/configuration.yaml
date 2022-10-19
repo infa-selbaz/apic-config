@@ -1,0 +1,8 @@
+service:
+  apm:
+    enabled: false
+    loglevel: INFO
+  canary:
+    enabled: false
+  image:
+    repository: ""

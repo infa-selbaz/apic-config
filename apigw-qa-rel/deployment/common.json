@@ -3,7 +3,7 @@
         "repo": "apic-config"
     },
     "landscape": {
-        "product": "apic",
+        "product": "apim",
         "type": "aws",
         "env": "qa",
         "id": "qa",
@@ -32,23 +32,25 @@
         "iamroles": {
             "mgmt": "",
             "secret": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole",
-            "func": ""
+            "func": "",
+            "app": ""
         },
         "vault": {
             "url": "https://ha-vault.eks.iicsqa.uswest2.cloudtrust.rocks",
             "role": "qa-intcloud-apigw",
             "basepath": "qa/intcloud/apigw/common/aws-iicsqa-intcloud-apigwqarel-eks-qa-usw2/apigw-qa-rel",
-            "dbrelpath": ""
+            "dbrelpath": "/resource/RDBMS/mysql/MySQL/active"
         },
         "terraform": {
             "profile": "TBD",
             "version": "TBD",
-            "namespace": "TBD",
-            "gitRepo": "TBD"
+            "namespace": "apigw-qa-rel",
+            "gitRepo": "TBD",
+	    "serviceAccount": "ccgf-custom-job-pod-sa"
         },
         "iics": {
             "certgen": {
-                "serviceaccount": "icrt"
+                "serviceaccount": "apic"
             },
             "podname": "pod2",
             "url": "qa-ma.rel.infaqa.com",
@@ -70,33 +72,35 @@
         },
         "gatewayList": [
           {
-            "name": "apic-gateway-internal",
+            "name": "apim-gateway-internal",
             "isInternal": "true",
             "tlsMode": "mutual",
             "isVaultInjector": "true",
-            "oidcRole": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole"
+            "oidcRole": ""
           },
           {
-            "name": "apic-gateway-external",
+            "name": "apim-gateway-external",
             "isInternal": "true",
             "tlsMode": "simple",
             "isVaultInjector": "true",
-            "oidcRole": "arn:aws:iam::530774763960:role/InfaQAAPIGWK8sWorkerNodeServiceRole"
+            "oidcRole": ""
           }
         ],
         "urls": {
-            "cdlgAppUrl": "",
-            "mgmtAppUrl": "",
-            "": ""
+            "cdlgAppUrl": "https://pod1-apic.rel.infaqa.com",
+            "mgmtAppUrl": "https://pod1-apic.rel.infaqa.com",
+            "": "https://pod1-apic.rel.infaqa.com"
         },
         "resetRouting": "true",
         "keepversions": "false",
+	"isCanary": "false",
         "deploymentConfiguration" : "",
         "istio": {
-            "version": "1.13.2",
+            "version": "1.14.3",
             "isCanaryEnabled": true,
             "hub": "infacloud-ct-docker.jfrog.io/foundation/istio/multiarch",
-            "tag": "1.14.3-tetrate-multiarch-v1"
+            "tag": "1.14.3-tetrate-multiarch-v1",
+            "revision": "1-14-3"
         }
     },
     "monitoring": {
@@ -110,7 +114,45 @@
             "url": "",
             "address": "",
             "port": ""
-        }
+        },
+        "rds": {
+            "dbsprefix": "",
+            "firstdbs": "apim_designer",
+		    "first_datastores": [
+		    {
+			  "dbname": "apim_designer",
+			  "classtype": "serviceResource",
+			  "category": "RDBMS",
+			  "name": "apim-designer",
+			  "function": "main",
+			  "tenantid": "system",
+			  "usertype": "user",
+			  "status": "active"
+		   },
+		   {
+			  "dbname": "apim_designer",
+			  "classtype": "serviceResource",
+			  "category": "RDBMS",
+			  "name": "apim-designer",
+			  "function": "main",
+			  "tenantid": "system",
+			  "usertype": "admin",
+			  "status": "active"
+		   }	    
+		   
+           ],
+            "master_database": {
+                "classtype": "resource",
+                "category": "RDBMS",
+                "type": "mysql",
+                "name": "MySQL",
+                "status": "active"
+            },
+            "prefix": "apim",
+            "url": "apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com",
+            "version": "1.0.0",
+	    "port" : "3306"
+      }
     },
     "validation": {
         "jenkins": "ccgf-qa-jenkins",
@@ -134,7 +176,7 @@
         "spinnakerDeployStageTimeout": "1800000"
     },
     "deployment": {
-        "pipeline-version": "0.2.383",
+        "pipeline-version": "0.2.396",
         "artifacts": {
             "url": "https://infacloud.jfrog.io/infacloud/",
             "docker": "infacloud-apim-docker-dev.jfrog.io",
@@ -144,7 +186,7 @@
             "helm-promote": "apim-helm-stable",
             "landscapeProvision": {
                 "name": "ccgf-landscape-provisioning-v2",
-                "version": "0.2.7"
+                "version": "0.2.8"
             },
             "landscapeConfigMap": {
                 "name": "ccgf-landscape-configmap",
@@ -169,7 +211,15 @@
             }, 
             "applog": {}
         },
-        "services": {}
+        "services": {
+                "apim-designer": {
+                    "db": {
+                        "liquibaseImage": "apim-designer-service-db",
+                        "dbRelPath": "/serviceResource/RDBMS/apim-designer/main/system/admin/active",
+			"db_name": "apim_designer",
+			"db_version" : "1.0.0"
+                    }
+                }
+            }
     }
 }
-

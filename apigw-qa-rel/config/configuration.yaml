@@ -1,15 +1,28 @@
 global:
- identity_service_base_url: ""
- session_service_base_url: ""
- migration_service_base_url: ""
- frs_base_url: ""
- application_integration_base_url: ""
- application_integration_internal_base_url: ""
+  identity_service_base_url: "https://qa-ma.rel.infaqa.com"
+  session_service_base_url: "https://qa-pod1.rel.infaqa.com"
+  migration_service_base_url: "https://qa-pod1.rel.infaqa.com"
+  frs_base_url: "https://qa-pod1.rel.infaqa.com"
+  application_integration_base_url: "https://ias-pod1.rel.infaqa.com"
+  application_integration_internal_base_url: "https://ias-qa-rel-pod1-int-elb.infacloudops.net"
+  cloudshell_service_base_url: "https://qa-pod1.rel.infaqa.com"
+  ma_service_base_url: "https://qa-ma.rel.infaqa.com"
+  saas_service_base_url: "https://qa-pod2.rel.infaqa.com"
+  license_service_base_url: "https://qa-pod1.rel.infaqa.com"
+  notification_service_base_url: "https://qa-pod1.rel.infaqa.com"
+  pod_service_base_url: "https://qa-pod1.rel.infaqa.com"
+  apic_service_base_url: "https://pod1-apic.rel.infaqa.com"
+  help_service_base_url: "https://network.informatica.com/onlinehelp/IICS/test"
+  preference_service_base_url: "https://qa-pod1.rel.infaqa.com"
+  current_env: "qa"
 designer:
-  apim_designer_service_jks_path=/etc/ssl/infa-certs/<service-name.jks>
-  apim_designer_jdbc_url=jdbc:mysql://<db server>:<db port>/<db name>
-  artifacts_base_path=/AppMount/apim/artifacts
-  logs_base_path=/AppMount/apim/logs
-  logging_level_apim=DEBUG
-  logging_level_spring=ERROR
-  
+  apim_designer_service_jks_path: "/etc/ssl/infa-certs/apim-designer-keystore.jks"
+  apim_designer_jdbc_url: "jdbc:mysql://apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com:3306/apim_designer"
+  artifacts_base_path: "/AppMount/apim/artifacts"
+  logs_base_path: "/AppMount/apim/logs"
+  logging_level_apim: "DEBUG"
+  logging_level_spring: "ERROR"
+ui:
+  cloud_ping_interval: 600
+  cloud_session_timeout: 600
+  notification_poll_interval: 60

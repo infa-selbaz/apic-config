@@ -11,4 +11,8 @@ configmap:
       value: "https://vault-uswest2.iicsqa.cloudtrust.rocks"
     - key: environment
       value: aws
+    - key: cms_service_url
+      value: "NA"
+    - key: external_url
+      value: "https://pod1-apic.rel.infaqa.com"
   mgmtServices:
