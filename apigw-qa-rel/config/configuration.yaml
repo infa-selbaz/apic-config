@@ -15,6 +15,9 @@ global:
   help_service_base_url: "https://network.informatica.com/onlinehelp/IICS/test"
   preference_service_base_url: "https://qa-pod1.rel.infaqa.com"
   current_env: "qa"
+  frs_internal_base_url: "https://intcloud-rel-pod1-internalelb.infacloudops.net"
+  apim_designer_service_internal_base_url: "http://apim-designer.apigw-qa-rel.svc.cluster.local:8080"
+  apim_designer_service_base_url: "https://pod1-apic.rel.infaqa.com"
 designer:
   apim_designer_service_jks_path: "/etc/ssl/infa-certs/apim-designer-keystore.jks"
   apim_designer_jdbc_url: "jdbc:mysql://apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com:3306/apim_designer"
@@ -22,6 +25,7 @@ designer:
   logs_base_path: "/AppMount/apim/logs"
   logging_level_apim: "ERROR"
   logging_level_spring: "ERROR"
+  apim_api_operation_limit: 50
 ui:
   cloud_ping_interval: 600
   cloud_session_timeout: 600
