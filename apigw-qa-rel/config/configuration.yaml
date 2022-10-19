@@ -20,7 +20,7 @@ designer:
   apim_designer_jdbc_url: "jdbc:mysql://apigw-qa-release-pod1-apic-rds.cce748qswozo.us-west-2.rds.amazonaws.com:3306/apim_designer"
   artifacts_base_path: "/AppMount/apim/artifacts"
   logs_base_path: "/AppMount/apim/logs"
-  logging_level_apim: "DEBUG"
+  logging_level_apim: "ERROR"
   logging_level_spring: "ERROR"
 ui:
   cloud_ping_interval: 600
